@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+	
+	<link rel="stylesheet" href="plugins/owl-carousel/assets/owl.carousel.css">
+
+    <link rel="stylesheet" href="plugins/owl-carousel/assets/owl.theme.default.css">	
+	
+	
+	<script src="https://api-maps.yandex.ru/2.0-stable/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+	
+    <title>Блог внутренняя</title>
+</head>
+<body>
+
+<div class = "overlay"></div>
+
+<div class="popup usagr-pp">
+	<a class="close1" href="#">X</a>
+	<div class="head">Забронировать столик</div>
+	<form method = "POST" action = "">
+		<input type = "text" name = "name" placeholder = "Ваше имя*"/>
+		<input type = "text" name = "phone" class = "phone" placeholder = "Ваш телефон*"/>
+		<div class="input-group date" id="datetimepicker1">
+			<input type="text" class="form-control dateTime" name = "datetime" id = "dateTime1" placeholder = "Дата и время бронирования *"/>
+			<span class="input-group-addon">
+			  <span class="glyphicon glyphicon-calendar"></span>
+			</span>				
+		</div>		
+		<select>
+			<option value = "Не выбрано">Выберете ресторан*</option>
+			<option value = "г. Москва, Профсоюзная 61А ТРЦ Калжуский">г. Москва, Профсоюзная 61А ТРЦ Калжуский</option>
+			<option value = "г. Москва, Кузнецкий мост 21/5">г. Москва, Кузнецкий мост 21/5</option>
+			<option value = "г. Крсногорск, Павшинский бульвар 20А">г. Крсногорск, Павшинский бульвар 20А</option>
+			<option value = "г. Саратов, 3-я Дачная ТРЦ ТАУ-ГАЛЕРЕЯ">г. Саратов, 3-я Дачная ТРЦ ТАУ-ГАЛЕРЕЯ</option>
+		</select>
+		<a class = "send_mess" href = "javascript:void(0);">Забронировать</a>
+	</form>
+</div>
+
+<div class="popup review-pp">
+	<a class="close1" href="#">X</a>
+	<div class="head">Оставить отзыв</div>
+	<form method = "POST" action = "">
+		<input type = "text" name = "name" placeholder = "Ваше имя*"/>
+		<input type = "text" name = "email" placeholder = "Ваш E-mail*"/>
+		<input type = "text" name = "social" placeholder = "Cсылка на профиль в соц сети"/>
+		<textarea name = "review" placeholder = "Ваш отзыв*"></textarea>
+		<a class = "send_review" href = "javascript:void(0);">Отправить</a>
+	</form>
+</div>
+
+<div class = "float__menu">
+	<a class = "float__menu__close" href = "javascript:void(0);">Х</a>
+	<ul>
+		<li><a href = "">О нас</a></li>
+		<li><a href = "">Рестораны</a></li>
+		<li><a href = "">Фотогалерея</a></li>
+		<li><a href = "">Меню</a></li>
+		<li><a href = "">Афиша</a></li>
+		<li><a href = "">Отзывы</a></li>
+		<li><a href = "">Доставка</a></li>
+		<li><a href = "">Блог</a></li>
+		<li><a href = "">Контакты</a></li>
+	</ul>
+</div>
+
+<header class = "header__inner">
+	<div class = "top__uzor"></div>
+	<div class = "container">
+		<div class = "row">
+			<div class = "col-md-1 col-sm-6 col-xs-6">
+				<div class = "header__left">
+					<a class = "show__menu" href = "javascript:void(0);"><img src = "images/menu.png" /></a>
+					<a class = "top__inst" href = ""><img src = "images/in.png" /></a>
+				</div>
+			</div>
+			<div class = "col-md-9">
+				<ul class = "top__menu">
+					<li><a href = "">О нас</a></li>
+					<li><a href = "">Рестораны</a></li>
+					<li><a href = "">Фотогалерея</a></li>
+					<li><a href = "">Меню</a></li>
+					<li><a href = "">Афиша</a></li>
+					<li><a href = "">Отзывы</a></li>
+					<li><a href = "">Доставка</a></li>
+					<li><a class = "active" href = "">Блог</a></li>
+					<li><a href = "">Контакты</a></li>
+				</ul>
+			</div>
+			<div class = "col-md-2 col-sm-6 col-xs-6">
+				<a class = "order" popup-target = "usagr-pp" href = "javascript:void(0);">Забронировать столик</a>
+			</div>
+		</div>
+
+	</div>
+</header>
+
+<section class = "content">
+	<a href = "/" class = "logo_georgian"><img src = "images/logok.png" /></a>
+	<div class="poster__block">
+		<p class="poster__block__bottom">Блог</p>
+	</div>
+	<div class = "container">
+		<div class = "row">
+			<div class = "col-md-12">	
+				<div class = "article">
+					<h1>Попробуйте настоящую грузинскую кухню</h1>
+					<p>Реплицированные с зарубежных источников, современные исследования, инициированные исключительно синтетически, указаны как претенденты на роль ключевых факторов. Учитывая ключевые сценарии поведения, курс на социально-ориентированный национальный проект требует определения и уточнения как самодостаточных, так и внешне зависимых концептуальных решений. Представители современных социальных резервов ассоциативно распределены по отраслям. Таким образом, реализация намеченных плановых заданий способствует повышению качества поставленных обществом задач.</p>
+					<img src = "images/artimg.png" />
+					<h3>Грузинские вина</h3>	
+					<p>Учитывая ключевые сценарии поведения, постоянный количественный рост и сфера нашей активности требует определения и уточнения как самодостаточных, так и внешне зависимых концептуальных решений. В рамках спецификации современных стандартов, некоторые особенности внутренней политики, превозмогая сложившуюся непростую экономическую ситуацию, смешаны с неуникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, понимание сути ресурсосберегающих технологий требует определения и уточнения форм воздействия.</p>
+				</div>
+			</div>
+		</div>		
+	</div>
+</section>
+
+<section class = "restaurants">
+	<div class = "restaurants__block">
+		<p class = "restaurants__block__top">Наши рестораны</p>
+		<p class = "restaurants__block__bottom">На карте города</p>
+	</div>
+	<div class = "container">
+		<div class = "row">
+			<div class = "col-md-12">
+				<div id = "slider__restaurants" class = "owl-carousel">
+
+					<div class = "item slider__addr__item">
+						<p class = "slider__addr__item__city">Москва</p>
+						<p class = "slider__addr__item__addr" maps = "map1">Профсоюзная 61А ТРЦ Калжуский</p>
+						<div class = "slider__addr__item__cont">
+							<p class = "slider__addr__item__phone">+7-926-601-26-94</p>
+							<a class = "slider__addr__item__order" href = "javascript:void(0);">Забронировать столик</a>
+						</div>	
+					</div>
+
+					<div class = "item slider__addr__item">
+						<p class = "slider__addr__item__city">Москва</p>
+						<p class = "slider__addr__item__addr" maps = "map2">Кузнецкий мост 21/5</p>
+						<div class = "slider__addr__item__cont">
+							<p class = "slider__addr__item__phone">+7-926-601-26-94</p>
+							<a class = "slider__addr__item__order" href = "javascript:void(0);">Забронировать столик</a>
+						</div>	
+					</div>
+
+					<div class = "item slider__addr__item">
+						<p class = "slider__addr__item__city">Красногорск</p>
+						<p class = "slider__addr__item__addr" maps = "map3">Павшинский бульвар 20А</p>
+						<div class = "slider__addr__item__cont">
+							<p class = "slider__addr__item__phone">+7-926-601-28-07</p>
+							<a class = "slider__addr__item__order" href = "javascript:void(0);">Забронировать столик</a>
+						</div>	
+					</div>
+					
+					<div class = "item slider__addr__item">
+						<p class = "slider__addr__item__city">Саратов</p>
+						<p class = "slider__addr__item__addr" maps = "map4">3-я Дачная ТРЦ ТАУ-ГАЛЕРЕЯ</p>
+						<div class = "slider__addr__item__cont">
+							<p class = "slider__addr__item__phone">+7-965-884-78-98</p>
+							<a class = "slider__addr__item__order" href = "javascript:void(0);">Забронировать столик</a>
+						</div>	
+					</div>					
+				</div>			
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class = "maps">
+	<div class = "container">
+		<div class = "col-md-12">
+			<div id = "map1" class = "maps__map"></div>
+			<div id = "map2" class = "maps__map"></div>
+			<div id = "map3" class = "maps__map"></div>
+			<div id = "map4" class = "maps__map"></div>
+		</div>
+	</div>
+</section>
+
+<section class = "social">
+	<div class = "container">
+		<div class = "row">
+			<div class = "col-md-4 col-sm-4 col-xs-4 col-copy">
+				<div class = "social__item">
+					<p>Хотите работать у нас?</p>
+					<a href = "" target = "_blank">Посмотрите<br/>текущие вакансии</a>
+				</div>
+			</div>
+			<div class = "col-md-4 col-sm-4 col-xs-4 col-copy">
+				<div class = "social__item">
+					<p>подпишитесь на наш instagram</p>
+					<a href = "" target = "_blank"><img src = "images/inst.png" /></a>
+				</div>			
+			</div>
+			<div class = "col-md-4 col-sm-4 col-xs-4 col-copy">
+				<div class = "social__item social__item__last">
+					<a href = "" target = "_blank"><img src = "images/resto.png" /></a>
+				</div>	
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer class = "footer">
+	<div class = "container">
+		<div class = "copyright">
+			<div class = "row">
+				<div class = "col-md-4 col-sm-4 col-xs-4 col-copy">
+					<p>Copyright Грузинские Каникулы, 2018</p>
+				</div>
+				<div class = "col-md-4 col-sm-4 col-xs-4 col-copy">
+					<a href = "">Политика конфиденциальности</a>
+				</div>
+				<div class = "col-md-4 col-sm-4 col-xs-4 col-copy">
+					<a href = "" target = "_blank">Разработка сайта Colortime</a>
+				</div>
+			</div>
+		</div>	
+	</div>
+</footer>
+
+<a id = "to__top" href = "javascript:void(0);"><img src = "images/top.png" /></a>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/moment-with-locales.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="plugins/owl-carousel/owl.carousel.js"></script>		
+<script src="js/maskedinput.js"></script>
+<script src="js/script.js"></script>
+
+<script type = "text/javascript">
+var myMap;
+
+ymaps.ready(function(){
+    myMap = new ymaps.Map("map1", {
+        center: [55.656034, 37.541551],
+        zoom: 16
+    });
+
+	
+	var placemark1 = new ymaps.Placemark([55.656034, 37.541551],
+		{
+			balloonContent: 'г.Москва, Профсоюзная 61А ТРЦ Калжуский'
+		},
+		{
+			preset: 'twirl#redIcon'
+		}
+	);
+
+
+    myMap.geoObjects.add(placemark1);
+
+    myMap.events.add('actiontick');
+	if(document.body.clientWidth < 992){
+		myMap.behaviors.disable('drag');
+	}
+});
+</script>
+
+<script type = "text/javascript">
+var myMap;
+
+ymaps.ready(function(){
+    myMap = new ymaps.Map("map2", {
+        center: [55.762537, 37.627315],
+        zoom: 16
+    });
+
+	
+	var placemark1 = new ymaps.Placemark([55.762537, 37.627315],
+		{
+			balloonContent: 'г. Москва, Кузнецкий мост 21/5'
+		},
+		{
+			preset: 'twirl#redIcon'
+		}
+	);
+
+
+    myMap.geoObjects.add(placemark1);
+
+    myMap.events.add('actiontick');
+	if(document.body.clientWidth < 992){
+		myMap.behaviors.disable('drag');
+	}
+});
+</script>
+
+<script type = "text/javascript">
+var myMap;
+
+ymaps.ready(function(){
+    myMap = new ymaps.Map("map3", {
+        center: [55.815470, 37.368331],
+        zoom: 16
+    });
+
+	
+	var placemark1 = new ymaps.Placemark([55.815470, 37.368331],
+		{
+			balloonContent: 'г. Красногорск, Павшинский бульвар 20А'
+		},
+		{
+			preset: 'twirl#redIcon'
+		}
+	);
+
+
+    myMap.geoObjects.add(placemark1);
+
+    myMap.events.add('actiontick');
+	if(document.body.clientWidth < 992){
+		myMap.behaviors.disable('drag');
+	}
+});
+</script>
+
+<script type = "text/javascript">
+var myMap;
+
+ymaps.ready(function(){
+    myMap = new ymaps.Map("map4", {
+        center: [51.576712, 45.972979],
+        zoom: 16
+    });
+
+	
+	var placemark1 = new ymaps.Placemark([51.576712, 45.972979],
+		{
+			balloonContent: 'г. Саратов, 3-я Дачная ТРЦ ТАУ-ГАЛЕРЕЯ'
+		},
+		{
+			preset: 'twirl#redIcon'
+		}
+	);
+
+
+    myMap.geoObjects.add(placemark1);
+
+    myMap.events.add('actiontick');
+	if(document.body.clientWidth < 992){
+		myMap.behaviors.disable('drag');
+	}
+});
+</script>
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.12&appId=221937237830287&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</body>
+</html>	
